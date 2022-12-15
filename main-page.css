@@ -1,0 +1,29 @@
+.menu-option {
+  color: white !important;
+}
+a:hover {
+  color: white;
+  background-color: #349af0;
+}
+.menu-center {
+  margin-left: 17%;
+}
+body {
+  background-color: #111111;
+}
+.modal-bd {
+  background-color: #111111;
+}
+.modal-login {
+  background-color: #25262c;
+  border-color: #25262c;
+}
+.login-modal {
+  margin-left: 72%;
+}
+a {
+  text-decoration: none;
+}
+.button-size {
+  width: 100%;
+}

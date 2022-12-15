@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e23b30fdf5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./user-table.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #111111">
+                <div class="container-fluid">
+                    <img src="./ratebox.PNG" sizes="40" alt="" />
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse menu-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active menu-option text-white" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu-option text-white" href="#">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu-option text-white" href="#">Actors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu-option text-white" href="#">Dashboard</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Login</button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- user list -->
+        <div>
+            <div class="row justify-content-center g-2">
+                <div class="col-2">
+                    <br />
+                    <div>
+                        <a class="nav-link" href="./user-table.html" aria-current="page"><i
+                                class="fa-solid fa-user"></i> Users</a>
+
+                        <a class="nav-link" href="./actor-table.html" aria-current="page"><i
+                                class="fa-solid fa-users"></i> Actors</a>
+
+                        <a class="nav-link" href="./movies-table.html" aria-current="page"><i
+                                class="fa-solid fa-film"></i> Movies</a>
+                    </div>
+                </div>
+                <div class="col-10 text-white table-back">
+                    <br />
+                    <span><input type="text" class="searchbox text-white" placeholder="Search user name"
+                            id="inputPassword5" width="10" /></span>
+                    <span class="add-actor"><button class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#adduserModal" data-bs-whatever="@mdo">
+                            Add User
+                        </button></span>
+                    <br />
+                    <div>
+                        <h5>Users List</h5>
+                        <div>
+                            <table class="table text-white table-back">
+                                <tr>
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                                <tr>
+                                    <td>Ajay</td>
+                                    <td>Devgan</td>
+                                    <td>ajay@gmail.com</td>
+                                    <td>Admin</td>
+                                    <td>Activated</td>
+                                    <td>
+                                        <button class="btn-primary action-button" data-bs-toggle="modal"
+                                            data-bs-target="#updateuserModal" data-bs-whatever="@mdo">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <button class="btn-danger action-button">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UPDATE USER MODAL -->
+        <div>
+            <div class="modal fade" id="updateuserModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content modal-bd">
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <h6 class="text-white">Update User</h6>
+                                    <label class="text-white">First Name:</label>
+                                    <input type="text" class="modal-login text-white" size="57%" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="text-white">Last Name:</label>
+
+                                    <input type="text" class="modal-login text-white" size="57%" />
+                                    <label class="text-white">Email:</label>
+
+                                    <input type="text" class="modal-login text-white" size="57%" />
+
+                                    <label class="text-white">Status:</label>
+                                    <br />
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label text-white" for="inlineRadio2">Active</label>
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label text-white" for="inlineRadio2">Deactive</label>
+                                    <br />
+                                    <label class="text-white">Role:</label>
+                                    <br />
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label text-white" for="inlineRadio2">Admin</label>
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label text-white" for="inlineRadio2">User</label>
+                                </div>
+
+                                <span><button class="btn btn-primary button-size">
+                                        Update User
+                                    </button></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- add user -->
+        <div>
+            <div class="modal fade" id="adduserModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content modal-bd">
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <h6 class="text-white">Add User</h6>
+                                    <label class="text-white">First Name:</label>
+                                    <input type="text" class="modal-login text-white" size="57%" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="text-white">Last Name:</label>
+
+                                    <input type="text" class="modal-login text-white" size="57%" />
+                                    <label class="text-white">Email:</label>
+
+                                    <input type="text" class="modal-login text-white" size="57%" />
+
+                                    <label class="text-white">Pasword:</label>
+
+                                    <input type="password" class="modal-login text-white" size="57%" />
+                                </div>
+
+                                <span><button class="btn btn-primary button-size">
+                                        Add User
+                                    </button></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
